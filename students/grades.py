@@ -4,7 +4,6 @@ class Student:
     mathematics_mark:int
     completed_assessments:bool
     name:str
-    average_mark: float
     average:float
     total_mark:int
 
