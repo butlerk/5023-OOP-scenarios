@@ -26,11 +26,3 @@ for student in students:
     else:
         print("Completed assessments: No")
     print('---\n')
-
-
-
-
-
-
-
-

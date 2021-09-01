@@ -1,5 +1,7 @@
 import shapes
 import math
+from shapes import Rectangle
+from shapes import Circle
 
 def create_rectangle():
     ''' 
@@ -7,27 +9,20 @@ def create_rectangle():
     calculates the area and perimeter for the rectangle and 
     prints these out (We assume that the lengths and widths will be floats)
     '''
-    # Prompts the user for a length and width for the rectangle
+    # Prompts the user for a length and width for the rectangle2
+    2
     print()
     length = float(input('Rectangle length: '))
     width = float(input('Rectangle width: '))
-
-    # Creates a dictionary for the rectangle
-    # TODO: Should be replaced with the creation of a Rectangle object
-    rectangle = {}
-    rectangle['length'] = length
-    rectangle['width'] = width
+    
+    # Creates an object called rectangle
+    rectangle = shapes.Rectangle(length, width)
 
     # Calculates the area for the rectangle and prints this rounded to 2 decimal places
-    # TODO: Replace the next line with a call to the Rectangle's calculate_area() method
-    area = rectangle['length'] * rectangle['width']
-    print(f'Rectangle area: {round(area, 2)}')
+    print(f'Rectangle area: {Rectangle.calculate_area(rectangle.length, rectangle.width)}')
 
     # Calculates the perimeter for the rectangle and prints this rounded to 2 decimal places
-    # TODO: Replace the next line with a call to the Rectangle's calculate_perimeter() method
-    perimeter = 2 * rectangle['length'] + 2 * rectangle['width']
-    print(f'Rectangle perimeter: {round(perimeter, 2)}')
-    print()
+    print(f'Rectangle perimeter: {Rectangle.calculate_perimeter(rectangle.length, rectangle.width)}')
 
 def create_circle():
     ''' 
@@ -39,20 +34,15 @@ def create_circle():
     print()
     radius = float(input('Circle radius: '))
 
-    # Creates a dictionary for the circle
-    # TODO: Should be replaced with the creation of a Circle object
-    circle = {}
-    circle['radius'] = radius
+    # Creates a circle object
+    circle = shapes.Circle(radius)
 
     # Calculates the area for the circle and prints this rounded to 2 decimal places
-    # TODO: Replace the next line with a call to the Circle's calculate_area() method
-    area = (circle['radius'] * circle['radius']) * math.pi 
-    print(f'Circle area: {round(area,2)}')
+    print(f'Circle area: {round(Circle.calculate_area(circle.radius), 2)}')
 
     # Calclates the circumference for the circle and prints this rounded to 2 decimal places
-    # TODO: Replace the next line with a call to the Circle's calculate_circumference() method
-    circumference = 2 * circle['radius'] * math.pi
-    print(f'Circle circumference: {round(circumference, 2)}')
+    print(f'Circle circumference: {round(Circle.calculate_circumference(circle.radius), 2)}')
+    
     print()
 
 def show_menu():
