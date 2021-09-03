@@ -9,7 +9,6 @@ def create_rectangle():
     prints these out (We assume that the lengths and widths will be floats)
     '''
     # Prompts the user for a length and width for the rectangle
-    2
     print()
     length = float(input('Rectangle length: '))
     width = float(input('Rectangle width: '))

@@ -1,5 +1,7 @@
 import turtle
-import drawing
+from drawing import Shape
+from drawing import Point
+
 
 def draw_shape(my_turtle, shape):
     ''' 
@@ -35,32 +37,23 @@ shapes = []
 # Creates an instance of a turtle which will be used for drawing the shapes
 my_turtle = turtle.Turtle()
 
-# Creates a dictionary for a blue triangle shape
-# TODO: Change this code to create a list of Point objects and a Shape object, rather than a dictionary
-blue_triangle = {}
-blue_triangle['colour'] = 'blue'
-bt_points = [(-120, 200), (-20, 200), (-70, 100)]
-blue_triangle['points'] = bt_points
 # Adds the blue triangle to the list of shapes
+bt_points = [ drawing.Point(-120, 200), drawing.Point(-20, 200), drawing.Point(-70, 100) ]
+blue_triangle = drawing.Shape('blue', bt_points, my_turtle)
 shapes.append(blue_triangle)
 
-# Creates a dictionary for an orange square shape
-# TODO: Change this code to create a list of Point objects and a Shape object, rather than a dictionary
-orange_square = {}
-orange_square['colour'] = 'orange'
-os_points = [(-200, -100), (-200, -150), (-150, -150), (-150, -100)]
-orange_square['points'] = os_points
+
 # Adds the orange square to the list of shapes
+os_points = [ drawing.Point(-200, -100), drawing.Point(-200, -150), drawing.Point (-150, -150), drawing.Point(-150, -100) ]
+orange_square = drawing.Shape('orange',  os_points, my_turtle)
 shapes.append(orange_square)
 
-# Creates a dictionary for a red triangle shape
-# TODO: Change this code to create a list of Point objects and a Shape object, rather than a dictionary
-red_triangle = {}
-red_triangle['colour'] = 'red'
-rt_points = [(100, 200), (250, 200), (175, 50)]
-red_triangle['points'] = rt_points
-# Adds the blue triangle to the list of shapes
+
+# Adds the red triangle to the list of shapes
+rt_points = [ drawing.Point(100, 200), drawing.Point(250, 200), drawing.Point(175, 50)]
+red_triangle = drawing.Shape('red',  rt_points, my_turtle)
 shapes.append(red_triangle)
+
 
 # Draws all of the shapes that are in the list in the window
 for shape in shapes:
