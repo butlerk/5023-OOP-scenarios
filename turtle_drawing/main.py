@@ -28,7 +28,7 @@ red_triangle = drawing.Shape('red',  rt_points, my_turtle)
 shapes.append(red_triangle)
 
 # Adds a purple octagon to the list of shapes
-po_points = [ drawing.Point(108, -193), drawing.Point(92, -193), drawing.Point(82, -183), drawing.Point(82, -167), drawing.Point(92, -157), drawing.Point(108, -157), drawing.Point(118, -167),drawing.Point(118, -183), drawing.Point(108, -193)]
+po_points = [ drawing.Point(108, -193), drawing.Point(92, -193), drawing.Point(82, -183), drawing.Point(82, -167), drawing.Point(92, -157), drawing.Point(108, -157), drawing.Point(118, -167), drawing.Point(118, -183)]
 purple_octagon = drawing.Shape('purple',  po_points, my_turtle)
 shapes.append(purple_octagon)
     
