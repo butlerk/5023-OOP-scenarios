@@ -28,16 +28,15 @@ red_triangle = drawing.Shape('red',  rt_points, my_turtle)
 shapes.append(red_triangle)
 
 # Adds a purple octagon to the list of shapes
-po_points = [ drawing.Point(108, -193), drawing.Point(92, -193), drawing.Point(82, -183), drawing.Point(82, -167), drawing.Point(92, -157), drawing.Point(108, -157), drawing.Point(118, -167), drawing.Point(118, -183)]
+po_points = [ drawing.Point(119, -221), drawing.Point(81, -221), drawing.Point(54, -194), drawing.Point(54, -156), drawing.Point(81, -129), drawing.Point(119, -129), drawing.Point(146, -156), drawing.Point(146, -194)]
 purple_octagon = drawing.Shape('purple',  po_points, my_turtle)
 shapes.append(purple_octagon)
-    
-
 
 # Draws all of the shapes that are in the list in the window
 for shape in shapes:
     # TODO: Modify the next line to use the draw method on the Shape object
     shape.draw()
-    
+
+my_turtle.hideturtle()
 # This line will mean that the Turtle window won't close until we click
 turtle.Screen().exitonclick() 
