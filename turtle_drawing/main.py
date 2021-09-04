@@ -1,34 +1,6 @@
 import turtle
 import drawing
 
-def draw_shape(my_turtle, shape):
-    ''' 
-    This function draws a shape with the Turtle.
-    This should be rewritten as a method in the Shape class for this scenario.
-    '''
-    # TODO: This function should be written to be a method in the Shape class
-        
-    points = shape.points # gets list of points to draw
-    # Put the pen up, so the turtle isn't drawing on the canvas and move to first point
-    my_turtle.penup()
-    my_turtle.goto((points[0].x,points[0].y))
-
-
-    # Sets up colour for shape fill colour and puts pen down
-    my_turtle.color(shape.colour)
-    my_turtle.begin_fill()
-    my_turtle.pendown()
-
-    # Moves around to different points to draw the shape
-    for point in points:
-        #my_turtle.goto(point)
-        my_turtle.goto((point.x,point.y))
-    
-    # Moves to first point, to close the shape
-    #my_turtle.goto(points[0])
-    my_turtle.goto((points[0].x,points[0].y))
-    my_turtle.end_fill()
-
 '''
     The mainline of the drawing program starts here
 '''
@@ -59,7 +31,7 @@ shapes.append(red_triangle)
 # Draws all of the shapes that are in the list in the window
 for shape in shapes:
     # TODO: Modify the next line to use the draw method on the Shape object
-    draw_shape(my_turtle, shape)
+    drawing.Shape.draw(my_turtle,shape)
     
 # This line will mean that the Turtle window won't close until we click
 turtle.Screen().exitonclick() 
