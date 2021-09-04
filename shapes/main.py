@@ -1,6 +1,6 @@
 import shapes
 import math
-from shapes import *
+
 
 def create_rectangle():
     ''' 
@@ -17,10 +17,10 @@ def create_rectangle():
     rectangle = shapes.Rectangle(length, width)
 
     # Calculates the area for the rectangle and prints this rounded to 2 decimal places
-    print(f'Rectangle area: {Rectangle.calculate_area(rectangle.length, rectangle.width)}')
+    print(f'Rectangle area: {shapes.Rectangle.calculate_area(rectangle.length, rectangle.width)}')
 
     # Calculates the perimeter for the rectangle and prints this rounded to 2 decimal places
-    print(f'Rectangle perimeter: {Rectangle.calculate_perimeter(rectangle.length, rectangle.width)}')
+    print(f'Rectangle perimeter: {shapes.Rectangle.calculate_perimeter(rectangle.length, rectangle.width)}')
 
 def create_circle():
     ''' 
@@ -36,10 +36,10 @@ def create_circle():
     circle = shapes.Circle(radius)
 
     # Calculates the area for the circle and prints this rounded to 2 decimal places
-    print(f'Circle area: {round(Circle.calculate_area(circle.radius), 2)}')
+    print(f'Circle area: {round(shapes.Circle.calculate_area(circle.radius), 2)}')
 
     # Calclates the circumference for the circle and prints this rounded to 2 decimal places
-    print(f'Circle circumference: {round(Circle.calculate_circumference(circle.radius), 2)}')
+    print(f'Circle circumference: {round(shapes.Circle.calculate_circumference(circle.radius), 2)}')
     
     print()
 
